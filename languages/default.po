@@ -1,0 +1,490 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portfolio Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-04 14:50-0600\n"
+"PO-Revision-Date: 2013-06-04 14:50-0600\n"
+"Last-Translator: We Are Pixel8 <hello@wearepixel8.com>\n"
+"Language-Team: We Are Pixel8 <hello@wearepixel8.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;gettext;gettext_noop;_x;__;_esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../wap8-portfolio-mgmt.php:73
+msgid "Enter Case Study Title"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:24
+#: ../includes/wap8-portfolio-admin-pages.php:151
+msgid "Portfolio Mgmt. Documentation"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:26
+#, php-format
+msgid "Thank you for downloading and installing our Portfolio Mgmt. plugin. This plugin was developed by <a href=\"%s\" target=\"_blank\">We Are Pixel8</a>, a custom WordPress theme shop, as an out of the box solution for portfolio content management within a WordPress website."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:28
+msgid "This plugin registers a custom post type developed specifically for organizing and displaying your portfolio posts. Portfolio Manager will also register custom taxonomies for Services and Portfolio Tags, supports post-thumbnails and comes with a custom widget for displaying recent portfolio posts in your widget ready areas."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:30
+msgid "Optional Templates"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:32
+#, php-format
+msgid "If your currently active theme does not contain the following optional templates, the next available default template, in <a href=\"%s\" target=\"_blank\">the WordPress template hierarchy</a>, will be used."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:37
+msgid "Single Portfolio"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:41
+msgid "Portfolio Archive"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:45
+msgid "Services Archive"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:49
+msgid "Portfolio Tags Archive"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:55
+#: ../includes/wap8-portfolio-help-tabs.php:27
+#: ../includes/wap8-portfolio-help-tabs.php:153
+msgid "Custom Meta Data"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:57
+msgid "Portfolio Mgmt. will add a custom meta box to the portfolio post editor titled, Case Study Information. The Case Study Information meta box contains optional fields for attaching post meta data to a post. If your currently active theme does not automatically support the display of this data, you will need to customized your templates accordingly, inside the loop, using <code>get_post_meta( $post_id, $key, $single )</code>."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:59
+msgid "The available custom meta keys are:"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:64
+#: ../includes/wap8-portfolio-help-tabs.php:44
+#: ../includes/wap8-portfolio-meta-boxes.php:61
+msgid "Client Name"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:68
+#: ../includes/wap8-portfolio-help-tabs.php:48
+#: ../includes/wap8-portfolio-meta-boxes.php:66
+msgid "Project URL"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:72
+#: ../includes/wap8-portfolio-help-tabs.php:52
+#: ../includes/wap8-portfolio-meta-boxes.php:71
+msgid "Project URL Text"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:78
+#: ../includes/wap8-portfolio-help-tabs.php:58
+#, php-format
+msgid "Please see the WordPress Codex for <a href=\"%s\" target=\"_blank\">detailed information</a> about the <code>get_post_meta()</code> function."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:80
+#: ../includes/wap8-portfolio-help-tabs.php:69
+#: ../includes/wap8-portfolio-help-tabs.php:160
+msgid "Template Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:82
+msgid "If you are a theme developer, or are comfortable developing for WordPress, we have added template tags for you to use anywhere within your theme inside of the loop. For safe measures, <strong>always</strong> wrap these template tags with the conditional statement, <code>&lt;?php if ( function_exists( &apos;wap8_portfolio&apos; ) ); ?&gt;</code>."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:87
+#: ../includes/wap8-portfolio-help-tabs.php:80
+msgid "Comma Separated Services with Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:91
+#: ../includes/wap8-portfolio-help-tabs.php:84
+msgid "Comma Separated Services without Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:95
+#: ../includes/wap8-portfolio-help-tabs.php:88
+msgid "Unordered List of Services with Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:99
+#: ../includes/wap8-portfolio-help-tabs.php:92
+msgid "Unordered List of Services without Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:103
+#: ../includes/wap8-portfolio-help-tabs.php:96
+msgid "Comma Separated Portfolio Tags with Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:107
+#: ../includes/wap8-portfolio-help-tabs.php:100
+msgid "Comma Separated Portfolio Tags without Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:111
+#: ../includes/wap8-portfolio-help-tabs.php:104
+msgid "Unordered List of Portfolio Tags with Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:115
+#: ../includes/wap8-portfolio-help-tabs.php:108
+msgid "Unordered List of Portfolio Tags without Links"
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:121
+msgid "Comma separated template tags will return a list wrapped with a <code>&lt;p&gt;</code> tag. Unordered lists will be wrapped with the <code>&lt;ul&gt;</code> tag. When using a template tag with links, the links will point to an archive for that custom taxonomy. If your currently active theme does not contain the optional templates, the next available default template will be used. Please see <strong>Optional Templates</strong> for more information."
+msgstr ""
+
+#: ../includes/wap8-portfolio-admin-pages.php:152
+msgid "Portfolio Mgmt."
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:28
+msgid "Thumbnail"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:29
+msgid "Case Study"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:30
+msgid "Client"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:31
+msgid "Author"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:32
+#: ../includes/wap8-portfolio-taxonomies.php:26
+#: ../includes/wap8-portfolio-taxonomies.php:45
+msgid "Services"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:33
+#: ../includes/wap8-portfolio-taxonomies.php:92
+#: ../includes/wap8-portfolio-taxonomies.php:109
+msgid "Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:34
+msgid "Date"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:80
+msgid "<i>No thumbnail.</i>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:96
+msgid "<i>No client.</i>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:129
+msgid "<i>No services.</i>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-custom-columns.php:162
+msgid "<i>No portfolio tags.</i>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:29
+msgid "The Case Study Information meta box contains optional fields for attaching post meta data to a post. If your currently active theme does not automatically support the display of this data, you will need to customized your templates accordingly."
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:31
+msgid "Display Custom Meta Data in your Theme"
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:33
+msgid "To easily display this content in your theme, you will need to use the <code>get_post_meta()</code> function <strong>inside of the loop</strong>. This function must take three parameters to work properly&mdash; <code>$post_id</code>, <code>$key</code> and <code>$single</code>."
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:35
+msgid "Here is an example of how to display the client name, wrapped with a <code>&lt;p&gt;</code> tag, within your theme: <code>&lt;?php echo &apos;&lt;p&gt;&apos; . get_post_meta( $post-&gt;ID, &apos;_wap8_client_name&apos;, true ) . &apos;&lt;/p&gt;&apos;; ?&gt;</code>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:37
+msgid "Portfolio Manager Custom Meta Keys"
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:39
+msgid "Below, you will find the three keys for the Case Study Information meta box."
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:71
+msgid "Included with Portfolio Mgmt. are eight template tags for you to display a list of custom taxonomies associated with a portfolio post."
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:73
+msgid "Available Template Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:75
+msgid "These template tags <strong>must be placed inside the loop</strong> in order for theme to work as intended. We urge you to wrap your code with the conditional check of <code>&lt;?php if ( function_exists( &apos;wap8_portfolio&apos; ) ) ?&gt;</code>."
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:114
+msgid "Comma separated template tags will return a list wrapped with a <code>&lt;p&gt;</code> tag. Unordered lists will be wrapped with the <code>&lt;ul&gt;</code> tag."
+msgstr ""
+
+#: ../includes/wap8-portfolio-help-tabs.php:116
+#, php-format
+msgid "<strong>Note:</strong> When using a template tag with links, the links will point to an archive for that custom taxonomy. If your currently active theme does not contain <a href=\"%1s\">the optional templates</a>, the next available default templates, in <a href=\"%2s\" target=\"_blank\">the WordPress template hierarchy</a>, will be used."
+msgstr ""
+
+#: ../includes/wap8-portfolio-meta-boxes.php:23
+msgid "Case Study Information"
+msgstr ""
+
+#: ../includes/wap8-portfolio-meta-boxes.php:58
+msgid "Case study information is optional meta data that can used by your theme."
+msgstr ""
+
+#: ../includes/wap8-portfolio-meta-boxes.php:75
+msgid "If your currently active theme does not already display this content, please click on the Help tab above for detailed instructions."
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:25
+#: ../includes/wap8-portfolio-registration.php:26
+msgid "Portfolio"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:27
+msgid "Add New"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:28
+msgid "All Case Studies"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:29
+msgid "Add New Case Study"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:30
+msgid "Edit"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:31
+msgid "Edit Case Study"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:32
+msgid "New Case Study"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:33
+msgid "View"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:34
+msgid "View Case Study"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:35
+msgid "Search Portfolio"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:36
+msgid "No Case Studies found"
+msgstr ""
+
+#: ../includes/wap8-portfolio-registration.php:37
+msgid "No Case Studies found in Trash"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:27
+msgid "Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:28
+msgid "Search Services"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:29
+msgid "Popular Services"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:30
+msgid "All Services"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:31
+msgid "View Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:32
+msgid "Parent Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:33
+msgid "Parent Service:"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:34
+msgid "Edit Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:35
+msgid "Update Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:36
+msgid "Add New Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:37
+msgid "New Service"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:40
+msgid "Choose from Most Used Services"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:93
+msgid "Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:94
+msgid "Search Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:95
+msgid "Popular Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:96
+msgid "All Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:97
+msgid "View Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:98
+msgid "Edit Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:99
+msgid "Update Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:100
+msgid "Add New Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:101
+msgid "New Portfolio Tag"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:102
+msgid "Separate Portfolio Tags with commas"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:103
+msgid "Add or Remove Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-taxonomies.php:104
+msgid "Choose from Most Used Portfolio Tags"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:30
+#, php-format
+msgid "Case study updated. <a href=\"%s\">View case study</a>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:31
+msgid "Custom field updated."
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:32
+msgid "Custom field deleted."
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:33
+msgid "Case study updated."
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:35
+#, php-format
+msgid "Case study restored to revision from %s"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:36
+#, php-format
+msgid "Case study published. <a href=\"%s\">View case study</a>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:37
+msgid "Case study saved."
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:38
+#, php-format
+msgid "Case study submitted. <a target=\"_blank\" href=\"%s\">Preview case study</a>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:39
+#, php-format
+msgid "Case study scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview case study</a>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:41
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: ../includes/wap8-portfolio-updated-messages.php:42
+#, php-format
+msgid "Case study draft updated. <a target=\"_blank\" href=\"%s\">Preview case study</a>"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:36
+msgid "Display recent portfolio case study posts."
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:39
+msgid "Recent Portfolio Posts"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:97
+msgid "There are no published case studies."
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:124
+msgid "Recent Case Studies"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:144
+msgid "Title"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:149
+msgid "Posts to show"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:150
+msgid "Max: 10"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:154
+msgid "Display featured thumbnail"
+msgstr ""
+
+#: ../includes/wap8-portfolio-widget.php:158
+msgid "Display case study title"
+msgstr ""
+

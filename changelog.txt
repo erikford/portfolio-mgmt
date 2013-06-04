@@ -1,0 +1,40 @@
+Portfolio Mgmt. 1.0.0
+=====================
+
+* Initial release
+
+Portfolio Mgmt. 1.0.1
+=====================
+
+* Improved PHP DocBlock Documentation
+* Lowered priority of wap8_portfolio_add_menu_page() function to 11
+* Lowered priority of wap8_portfolio_help_tabs() function to 11
+
+Portfolio Mgmt. 1.0.2
+=====================
+
+* All functions now have a priority of 10
+* Fixed widget issue where all posts were returning instead of set number
+* Fixed an issue where the custom taxonomy links on the edit screen were not working as intended
+
+Portfolio Mgmt. 1.0.3
+=====================
+
+* Updated WordPress compatibility version to 3.5
+
+Portfolio Mgmt. 1.0.4
+=====================
+
+* Improved nonce verification for custom meta box
+* Fixed incorrect text domains
+
+Portfolio Mgmt. 1.0.5
+=====================
+
+* Changed admin menu icon
+* Fixed syntax error
+
+Portfolio Mgmt. 1.0.6
+=====================
+
+* Added featured image column to post type edit.php screen
