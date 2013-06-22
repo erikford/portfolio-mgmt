@@ -4,7 +4,7 @@ Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.1
 Compatible up to: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
@@ -24,7 +24,7 @@ Please see the WordPress Codex for detailed information about template hierarchi
 
 == Installation ==
 
-You can install Portfolio Mgmt. either via the WordPress Dashboard or using by uploading the extracted `wap8-portfolio-mgmt` folder to your `/wp-conten/plugins/` directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
+You can install Portfolio Mgmt. either via the WordPress Dashboard or using by uploading the extracted `portfolio-mgmt` folder to your `/wp-content/plugins/` directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
 
 If you get a 404 error after publishing a portfolio post, click on Permalinks in your Settings menu and click Save Changes.
 
@@ -76,3 +76,10 @@ Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most re
 
 = 1.0.6 =
 * Added featured image column to post type edit.php screen
+
+= 1.0.7 =
+* Added a checkbox to the custom meta box for setting a case study as featured
+* Added an option to the widget for displaying featured case studies only
+* Updated the Admin Documentation Page to include meta key for featured case studies
+* Updated the Help Tab to include meta key for featured case studies
+* Updated screenshots

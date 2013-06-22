@@ -38,7 +38,7 @@ function wap8_add_portfolio_meta_boxes() {
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.4 Improved nonce verifications
+ * @since 1.0.7 Add featured case study checkbox
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -46,8 +46,9 @@ function wap8_add_portfolio_meta_boxes() {
 function wap8_portfolio_case_info_cb( $post ) {
 	
 	// declare variables to store saved meta data
-	$client = get_post_meta( $post->ID, '_wap8_client_name', true ); // client name
-	$project_url = get_post_meta( $post->ID, '_wap8_project_url', true ); // project URL
+	$feature_case     = get_post_meta( $post->ID, '_wap8_portfolio_feature', true );
+	$client           = get_post_meta( $post->ID, '_wap8_client_name', true ); // client name
+	$project_url      = get_post_meta( $post->ID, '_wap8_project_url', true ); // project URL
 	$project_url_text = get_post_meta( $post->ID, '_wap8_project_url_text', true ); // project URL text
 
 	// nonce to verify intention later
@@ -56,6 +57,11 @@ function wap8_portfolio_case_info_cb( $post ) {
 	?>
 	
 	<p><?php _e( 'Case study information is optional meta data that can used by your theme.', 'wap8plugin-i18n' ); ?></p>
+	
+	<p>
+		<input id="wap8-portfolio-feature" name="_wap8_portfolio_feature" type="checkbox" value="1" <?php checked( $feature_case ); ?> />
+		<label for="wap8-portfolio-feature"><?php _e( 'Feature this Case Study', 'wap8plugin-i18n' ); ?></label>
+	</p>
 	
 	<p>
 		<label for="wap8-client-name"><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></label><br />
@@ -93,7 +99,7 @@ add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.5 Fixed syntax error
+ * @since 1.0.7 Added save featured case study checkbox
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -114,6 +120,13 @@ function wap8_save_portfolio_meta( $id ) {
 	// make sure the current user can edit the post
 	if ( !current_user_can( 'edit_post' ) )
 		return;
+		
+	// save featured case study checkbox
+	if ( isset( $_POST['_wap8_portfolio_feature'] ) ) {
+		update_post_meta( $id, '_wap8_portfolio_feature', $_POST['_wap8_portfolio_feature'] );
+	} else {
+		delete_post_meta( $id, '_wap8_portfolio_feature', '' );
+	}
 	
 	// strip all tags and escape attributes before saving client name
 	if ( isset( $_POST['_wap8_client_name'] ) )

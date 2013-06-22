@@ -38,3 +38,12 @@ Portfolio Mgmt. 1.0.6
 =====================
 
 * Added featured image column to post type edit.php screen
+
+Portfolio Mgmt. 1.0.7
+=====================
+
+* Added a checkbox to the custom meta box for setting a case study as featured
+* Added an option to the widget for displaying featured case studies only
+* Updated the Admin Documentation Page to include meta key for featured case studies
+* Updated the Help Tab to include meta key for featured case studies
+* Updated screenshots

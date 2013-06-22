@@ -13,7 +13,7 @@
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.7 Added meta key information for featured case study
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -40,6 +40,10 @@ function wap8_portfolio_help_tabs_content( $tab = 'wap8_portfolio_help_meta' ) {
 			
 			<table>
 				<tbody>
+					<tr valign="top">
+						<th scope="row" style="text-align: right;"><?php _e( 'Featured Case Study', 'wap8plugin-i18n' ); ?></th>
+						<td><code>_wap8_portfolio_feature</code></td>
+					</tr>
 					<tr valign="top">
 						<th scope="row" style="text-align: right;"><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></th>
 						<td><code>_wap8_client_name</code></td>

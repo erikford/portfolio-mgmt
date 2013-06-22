@@ -4,7 +4,7 @@
 Plugin Name: Portfolio Mgmt.
 Plugin URI: http://www.wearepixel8.com/2943/portfolio-mgmt-wordpress-plugin/
 Description: Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
-Version: 1.0.6
+Version: 1.0.7
 Author: We Are Pixel8
 Author URI: http://www.wearepixel8.com
 License:
@@ -33,15 +33,15 @@ define( 'WAP8PORTFOLIO', plugin_dir_path( __FILE__ ) );
 /* Includes
 /*-----------------------------------------------------------------------------------*/
 
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-taxonomies.php' ); // register custom taxonomies
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-registration.php' ); // register custom post type
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-meta-boxes.php' ); // add custom meta boxes to the post editor screen
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-help-tabs.php' ); // add help tabs to the portfolio post editor screen
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-taxonomies.php' );       // register custom taxonomies
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-registration.php' );     // register custom post type
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-meta-boxes.php' );       // add custom meta boxes to the post editor screen
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-help-tabs.php' );        // add help tabs to the portfolio post editor screen
 include( WAP8PORTFOLIO . 'includes/wap8-portfolio-updated-messages.php' ); // custom post updated messages
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-custom-columns.php' ); // add custom columns to custom post type edit screen
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-widget.php' ); // portfolio widget
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-template-tags.php' ); // template tags
-include( WAP8PORTFOLIO . 'includes/wap8-portfolio-admin-pages.php' ); // add admin info page
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-custom-columns.php' );   // add custom columns to custom post type edit screen
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-widget.php' );           // portfolio widget
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-template-tags.php' );    // template tags
+include( WAP8PORTFOLIO . 'includes/wap8-portfolio-admin-pages.php' );      // add admin info page
 
 /*-----------------------------------------------------------------------------------*/
 /* Case Studies Title Field Label
@@ -113,13 +113,13 @@ function wap8_portfolio_menu_icon() {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/* Load language file
+/* Portfolio Text Domain
 /*-----------------------------------------------------------------------------------*/
 
 add_action( 'plugins_loaded', 'wap8_portfolio_text_domain', 10 );
 
 /**
- * Portfolio text domain.
+ * Portfolio Text Domain
  *
  * Load the text domain for internationalization.
  *

@@ -13,7 +13,7 @@ add_action( 'widgets_init', 'wap8_portfolio_widget', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.7 Added option for displaying featured case studies only
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -45,11 +45,12 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		extract( $args );
 		
-		// declare variables for storing saved widget settings
-		$title = apply_filters( 'widget_title', $instance['title'] ); // saved widget title
-		$studies_count = $instance['studies_count']; // saved amount of posts to display
-		$studies_thumb = $instance['studies_thumb']; // saved featured thumbnail setting
-		$studies_title = $instance['studies_title']; // saved case study title setting
+		// saved widget settings
+		$title           = apply_filters( 'widget_title', $instance['title'] ); // saved widget title
+		$studies_count   = $instance['studies_count'];                          // saved amount of posts to display
+		$studies_thumb   = $instance['studies_thumb'];                          // saved featured thumbnail setting
+		$studies_title   = $instance['studies_title'];                          // saved case study title setting
+		$studies_feature = $instance['studies_feature'];                        // saved featured case studies setting
 		
 		echo $before_widget; // echo HTML set in register_sidebar by the currently active theme
 		
@@ -59,14 +60,26 @@ class wap8_Portfolio_Widget extends WP_Widget {
 			
 		}
 		
-		// save custom loop arguments in an array
-		$args = array(
-			'post_type'      => 'wap8-portfolio',
-			'post_status'    => 'publish',
-			'posts_per_page' => $studies_count,
-			'orderby'        => 'date',
-			'order'	         => 'DESC'
-		);
+		// custom loop arguments
+		if ( $studies_feature == 1 ) { // if display featured case studies only has been set
+			$args = array(
+				'post_type'      => 'wap8-portfolio',
+				'post_status'    => 'publish',
+				'meta_key'       => '_wap8_portfolio_feature',
+				'meta_value'     => '1',
+				'posts_per_page' => $studies_count,
+				'orderby'        => 'date',
+				'order'	         => 'DESC'
+			);
+		} else {
+			$args = array(
+				'post_type'      => 'wap8-portfolio',
+				'post_status'    => 'publish',
+				'posts_per_page' => $studies_count,
+				'orderby'        => 'date',
+				'order'	         => 'DESC'
+			);
+		}
 		
 		$studies = new WP_Query( $args ); // open a custom query
 		
@@ -98,7 +111,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		endif; // end the custom query
 		
-		wp_reset_query(); // return everything back to normal
+		wp_reset_postdata(); // return everything back to normal
 		
 		echo $after_widget;	// echo HTML set in register_sidebar by the currently active theme
 			
@@ -109,10 +122,11 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		$instance = $old_instance;
 		
-		$instance['title'] = strip_tags( $new_instance['title'] ); // sanitize the title
-		$instance['studies_count'] = ( int ) $new_instance['studies_count']; // make sure the post count is an integer
-		$instance['studies_thumb'] = isset( $new_instance['studies_thumb'] ); // if display featured thumbnail is set
-		$instance['studies_title'] = isset( $new_instance['studies_title'] ); // if display case study title is set
+		$instance['title']           = strip_tags( $new_instance['title'] );      // sanitize the title
+		$instance['studies_count']   = ( int ) $new_instance['studies_count'];    // make sure the post count is an integer
+		$instance['studies_thumb']   = isset( $new_instance['studies_thumb'] );   // if display featured thumbnail is set
+		$instance['studies_title']   = isset( $new_instance['studies_title'] );   // if display case study title is set
+		$instance['studies_feature'] = isset( $new_instance['studies_feature'] ); // if display featured case studies only is set
 		
 		return $instance;
 	
@@ -156,6 +170,10 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		<p>
 			<input id="<?php echo $this -> get_field_id( 'studies_title' ); ?>" name="<?php echo $this -> get_field_name( 'studies_title' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_title'] ) ? $instance['studies_title'] : 0); ?> />&nbsp;<label for="<?php echo $this -> get_field_id( 'studies_title' ); ?>"><?php _e( 'Display case study title', 'wap8plugin-i18n' ); ?></label>
+		</p>
+		
+		<p>
+			<input id="<?php echo $this->get_field_id( 'studies_feature' ); ?>" name="<?php echo $this->get_field_name( 'studies_feature' ); ?>" type="checkbox" <?php checked( isset( $instance['studies_feature'] ) ? $instance['studies_feature'] : 0 ); ?> />&nbsp;<label for="<?php echo $this->get_field_id( 'studies_feature' ); ?>"><?php _e( 'Featured Case Studies Only', 'wap8plugin-i18n' ); ?></label>
 		</p>
 		
 		<?php	
