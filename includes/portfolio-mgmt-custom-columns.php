@@ -16,21 +16,28 @@ add_filter( 'manage_edit-wap8-portfolio_columns', 'wap8_custom_portfolio_columns
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.8 Removed the custom columns for custom taxonomies. Added column for featured case studies.
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
 
 function wap8_custom_portfolio_columns( $columns ) {
 
+	$portfolio_services = get_taxonomy( 'wap8-services' );
+	$portfolio_tags     = get_taxonomy( 'wap8-portfolio-tags' );
+	
+	$services_label = $portfolio_services->labels->name;
+	$tags_label     = $portfolio_tags->labels->name;
+	
 	$columns = array(
 		'cb'                         => '<input type="checkbox" />',
 		'wap8-featured-image'        => __( 'Thumbnail', 'wap8plugin-i18n' ),
+		'wap8-featured-column'       => __( 'Featured', 'wap8plugin-i18n' ),
 		'title'                      => _x( __( 'Case Study', 'wap8plugin-i18n' ), 'column name' ),
 		'wap8-client-column'         => __( 'Client', 'wap8plugin-i18n' ),
+		'wap8-services-column'       => $services_label,
+		'wap8-portfolio-tags-column' => $tags_label,
 		'author'                     => __( 'Author', 'wap8plugin-i18n' ),
-		'wap8-services-column'       => __( 'Services', 'wap8plugin-i18n' ),	// custom column for services
-		'wap8-portfolio-tags-column' => __( 'Portfolio Tags', 'wap8plugin-i18n' ), // custom column for portfolio tags
 		'date'                       => _x( __( 'Date', 'wap8plugin-i18n' ), 'column name' )
 	);
 	
@@ -56,7 +63,7 @@ add_action( 'manage_wap8-portfolio_posts_custom_column', 'wap8_portfolio_columns
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.0
+ * @since 1.0.8 Removed the custom columns for custom taxonomies. Added column for featured case studies.
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -82,6 +89,18 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 			}
 			
 			break;
+			
+		case 'wap8-featured-column' : // featured case column
+		
+			$featured = get_post_meta( $post->ID, '_wap8_portfolio_feature', true ); // get the featured status of the current post
+			
+			if ( $featured == 1 ) { // the current post has been marked as featured
+				
+				echo '<img src="' . plugin_dir_url( dirname( __FILE__ ) ) . 'images/star.png">';
+				
+			}
+			
+			break;
 		
 		case 'wap8-client-column' : // client column
 		
@@ -89,7 +108,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 			
 			if ( !empty( $client ) ) { // if a client name has been set
 				
-				echo $client;
+				echo esc_html( $client );
 				
 			} else { // no client name has been set
 				
@@ -98,7 +117,7 @@ function wap8_portfolio_columns_content( $column, $post_id ) {
 			}
 			
 			break;
-		
+			
 		case 'wap8-services-column' : // services column
 			
 			$terms = get_the_terms( $post_id, 'wap8-services' ); // get the services for the post

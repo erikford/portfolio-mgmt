@@ -56,7 +56,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 		
 		if ( $title ) { // if this widget has a title
 		
-			echo $before_title . $title . $after_title; // display the title wrapped with the HTML set by the currently active theme
+			echo $before_title . esc_html( $title ) . $after_title; // display the title wrapped with the HTML set by the currently active theme
 			
 		}
 		
@@ -156,7 +156,7 @@ class wap8_Portfolio_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'wap8plugin-i18n' ); ?></label><br />
-			<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title'];?>" />
+			<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] );?>" />
 		</p>
 		
 		<p>

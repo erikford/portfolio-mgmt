@@ -1,10 +1,10 @@
 === Portfolio Mgmt. ===
 Contributors: wearepixel8
 Tags: custom post type, portfolio, post type, widget
-Requires at least: 3.1
-Compatible up to: 3.5.1
-Tested up to: 3.5.1
-Stable tag: 1.0.7
+Requires at least: 3.5
+Compatible up to: 3.6
+Tested up to: 3.6
+Stable tag: 1.0.8
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.
@@ -24,7 +24,7 @@ Please see the WordPress Codex for detailed information about template hierarchi
 
 == Installation ==
 
-You can install Portfolio Mgmt. either via the WordPress Dashboard or using by uploading the extracted `portfolio-mgmt` folder to your `/wp-content/plugins/` directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
+You can install Portfolio Mgmt. either via the WordPress Dashboard or by uploading the extracted `portfolio-mgmt` folder to your `/wp-content/plugins/` directory. Once the plugin has been successfully installed, simply activate the plugin through the Plugins menu in your WordPress Dashboard.
 
 If you get a 404 error after publishing a portfolio post, click on Permalinks in your Settings menu and click Save Changes.
 
@@ -35,6 +35,9 @@ If your currently active theme does not contain the optional templates needed fo
 
 = Does Portfolio Mgmt. support post-thumbnails? =
 Yes. Please note that Portfolio Mgmt. will only add theme support for this feature if your currently active theme does not already.
+
+= Can I change the permalink structure to something custom? =
+Yes. The custom post type and custom taxonomy arguments are filterable allowing themes and other plugins the ability to change the permalink structure.
 
 = Does Portfolio Mgmt. come with any widgets? =
 Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most recently published portfolio posts in any widget ready area.
@@ -83,3 +86,13 @@ Yes. Portfolio Mgmt. comes with 1 widget for displaying up to 10 of your most re
 * Updated the Admin Documentation Page to include meta key for featured case studies
 * Updated the Help Tab to include meta key for featured case studies
 * Updated screenshots
+
+= 1.0.8 =
+* Allow the custom post type and custom taxonomy arguments to be filtered by a theme or plugin
+* Improved data sanitization for custom meta box
+* Plugin documentation is now a tabbed submenu item
+
+== Upgrade Notice ==
+
+= 1.0.8=
+Added filters so themes and other plugins can amend the custom post type and custom taxonomy arguments.

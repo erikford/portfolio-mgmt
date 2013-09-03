@@ -65,7 +65,7 @@ function wap8_portfolio_case_info_cb( $post ) {
 	
 	<p>
 		<label for="wap8-client-name"><?php _e( 'Client Name', 'wap8plugin-i18n' ); ?></label><br />
-		<input type="text" id="wap8-client-name" name="_wap8_client_name" size="30" value="<?php echo $client; ?>" />
+		<input type="text" id="wap8-client-name" name="_wap8_client_name" size="30" value="<?php echo esc_attr( $client ); ?>" />
 	</p>
 	
 	<p>
@@ -75,7 +75,7 @@ function wap8_portfolio_case_info_cb( $post ) {
 	
 	<p>
 		<label for="wap8-project-url-text"><?php _e( 'Project URL Text', 'wap8plugin-i18n' ); ?></label><br />
-		<input type="text" id="wap8-project-url-text" name="_wap8_project_url_text" size="30" value="<?php echo $project_url_text; ?>" /><br />
+		<input type="text" id="wap8-project-url-text" name="_wap8_project_url_text" size="30" value="<?php echo esc_attr( $project_url_text ); ?>" /><br />
 	</p>
 	
 	<p><?php _e( 'If your currently active theme does not already display this content, please click on the Help tab above for detailed instructions.', 'wap8plugin-i18n' ); ?></p>
@@ -99,7 +99,7 @@ add_action( 'save_post', 'wap8_save_portfolio_meta', 10 );
  *
  * @package Portfolio Mgmt.
  * @version 1.0.0
- * @since 1.0.7 Added save featured case study checkbox
+ * @since 1.0.8 Improve data sanitization
  * @author Erik Ford for We Are Pixel8 <@notdivisible>
  *
  */
@@ -130,7 +130,7 @@ function wap8_save_portfolio_meta( $id ) {
 	
 	// strip all tags and escape attributes before saving client name
 	if ( isset( $_POST['_wap8_client_name'] ) )
-		update_post_meta( $id, '_wap8_client_name', wp_strip_all_tags( esc_attr( $_POST['_wap8_client_name'] ) ) );
+		update_post_meta( $id, '_wap8_client_name', wp_strip_all_tags( $_POST['_wap8_client_name'] ) );
 	
 	// escape URL before saving project URL
 	if ( isset( $_POST['_wap8_project_url'] ) )
@@ -138,6 +138,6 @@ function wap8_save_portfolio_meta( $id ) {
 	
 	// strip all tags and escape attributes before saving project URL text
 	if ( isset( $_POST['_wap8_project_url_text'] ) )
-		update_post_meta( $id, '_wap8_project_url_text', wp_strip_all_tags( esc_attr( $_POST['_wap8_project_url_text'] ) ) );
+		update_post_meta( $id, '_wap8_project_url_text', wp_strip_all_tags( $_POST['_wap8_project_url_text'] ) );
 	
 }

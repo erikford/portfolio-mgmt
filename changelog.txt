@@ -47,3 +47,10 @@ Portfolio Mgmt. 1.0.7
 * Updated the Admin Documentation Page to include meta key for featured case studies
 * Updated the Help Tab to include meta key for featured case studies
 * Updated screenshots
+
+Portfolio Mgmt. 1.0.8
+=====================
+
+* Allow the custom post type and custom taxonomy arguments to be filtered by a theme or plugin
+* Improved data sanitization for custom meta box
+* Plugin documentation is now a tabbed submenu item
