@@ -4,7 +4,7 @@ Tags: custom post type, portfolio, post type, widget
 Requires at least: 3.5
 Compatible up to: 3.6
 Tested up to: 3.6
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2
 
 Add the power of portfolio content management to your WordPress website with Portfolio Mgmt.

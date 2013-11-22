@@ -70,7 +70,7 @@ function wap8_portfolio_case_info_cb( $post ) {
 	
 	<p>
 		<label for="wap8-project-url"><?php _e( 'Project URL', 'wap8plugin-i18n' ); ?></strong><br />
-		<input type="text" id="wap8-project-url" name="_wap8_project_url" size="30" value="<?php echo esc_url( $project_url ) ?>" /><br />
+		<input type="text" id="wap8-project-url" name="_wap8_project_url" size="30" value="<?php echo esc_attr( $project_url ) ?>" /><br />
 	</p>
 	
 	<p>
@@ -118,7 +118,7 @@ function wap8_save_portfolio_meta( $id ) {
 		return;
 
 	// make sure the current user can edit the post
-	if ( !current_user_can( 'edit_post' ) )
+	if ( !current_user_can( 'edit_post', $id ) )
 		return;
 		
 	// save featured case study checkbox
